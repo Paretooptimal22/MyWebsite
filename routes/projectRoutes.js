@@ -17,7 +17,7 @@ module.exports = app => {
   })
 
   // POST ONE PROJECT
-  app.post('/projects/:id', (req, res) => {
+  app.post('/projects', (req, res) => {
     Project.create(req.body)
       .then(project => res.json(project))
       .catch(e => console.error(e))
